@@ -1,3 +1,6 @@
+body {
+    height: 100%;
+}
 h1 {
     font-family: 'Rock Salt', cursive;
     text-align: center;
@@ -11,3 +14,67 @@ h2 {
     padding: 50px;
 }
 
+.labels {  
+    font-family: 'Raleway', sans-serif;
+    /* font-size: 16pt; */
+}
+
+#svgcontainer2 {
+    height: 1000px;
+}
+
+svg {
+    width: 100%;
+    height: 1000px;
+    display: block;
+}
+
+#s_row {
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid gray;
+    list-style-type: none;
+}
+
+li {
+    width: 300px;
+    list-style-type: none;
+
+}
+.row {
+    padding-top: 10px;
+}
+
+a:link {
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid black;
+  }
+
+#drop {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16pt; 
+}
+
+
+.links { 
+    stroke:gray;
+    stroke-width: 0.35;
+}
+
+#viz {
+    width: 100%;
+    padding-top: 50px;
+    height: 1000px; 
+    margin-bottom: 0px; 
+    border: 1px solid lightgray;
+    font-family: 'Raleway', sans-serif;
+   /* font-size: 16pt; */
+}
+
+.btn {
+    width: 100px;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 50px; 
+    border-radius: 0px;
+    border: 1px solid black;
+}

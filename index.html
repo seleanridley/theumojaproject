@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -12,6 +13,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
 
     <title>The Umoja Project</title>
   </head>
@@ -32,67 +34,13 @@
             </div>
         </div>
 
-        <div class="row">
+        <div id="svgcontainer"></div>
 
-        <svg width="600" height="500"></svg>
-
-        </div>
-            <script>
-                //height = 600;
-                //width = 32;
-                d3 = require("d3@5");
-
-               // chart = {
-                const svg = d3.append("svg")
-                    .attr("viewBox", [0, 0, width, height])
-                    .attr("stroke-width", 2);
-
-                const circles = d3.range(20).map(i => ({
-                    x: Math.random() * (width - radius * 2) + radius,
-                    y: Math.random() * (height - radius * 2) + radius,
-                }));
-
-                svg.selectAll("circle")
-                    .data(circles)
-                    .join("circle")
-                    .attr("cx", d => d.x)
-                    .attr("cy", d => d.y)
-                    .attr("r", radius)
-                    .attr("fill", (d, i) => d3.schemeCategory10[i % 10])
-                    .call(drag);
-
-                 //   return svg.node();
-                 //  }
-
-                //drag = {
-
-                function dragstarted(d) {
-                d3.select(this).raise().attr("stroke", "black");
-                }
-
-                function dragged(d) {
-                d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
-                }
-
-                function dragended(d) {
-                d3.select(this).attr("stroke", null);
-                }
-
-                d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended);
-                //}
-            
-
-            </script>
-        </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- Popper.js first, then Bootstrap JS -->
+    <!-- JavaScript -->
+    <script src="js/indexd3.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
 </body>
 </html>
